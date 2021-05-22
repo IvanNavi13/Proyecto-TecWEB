@@ -17,3 +17,9 @@
 
 
 
+<<<<<<< HEAD
+=======
+Equipo:
+
+Cano Jiménez Samuel Isaías
+>>>>>>> da311ac7df85cba88b7468d2b77ff96ab27a6ec7
