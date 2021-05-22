@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-
-
 /*Estructura de la pagina*/
 /*
 #contenedor {
@@ -66,7 +64,7 @@
   background-color: #952F57;
   text-align: center;
   padding: 10px;
-  margin: auto;
+  margin: 0;
 }
 
 /**/
@@ -177,4 +175,42 @@
 
 .container .card:hover .box .content a {
   background: #ff568f;
+}
+
+
+
+/*Estilo para el pie de la pagina principal*/
+
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  width: 60px;
+  height: 65px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: all .4s;
+}
+
+.icon:nth-child(1):hover{
+  box-shadow: 0px 10px #ffff;
+}
+
+.icon:nth-child(2):hover{
+  box-shadow:  0px 10px #ffff;
+}
+
+.fa-facebook-f{
+  color:#ffff;
+  filter: drop-shadow(10px 10px 10px #ffff);
+}
+
+.fa-twitter{
+  color:#ffff;
+  filter: drop-shadow(10px 10px 10px #ffff);
 }
