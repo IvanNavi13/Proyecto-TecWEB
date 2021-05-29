@@ -1,96 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/*Estructura de la pagina*/
-/*
-#contenedor {
-}
-#cabecera {
-  width: 100%;
-}
-#menu {
-  float: left;
-  width: 15%;
-}
-#contenido {
-  float: left;
-  width: 85%;
-}
-#contenido #principal {
-  float: left;
-  width: 80%;
-}
-#contenido #secundario {
-  float: left;
-  width: 20%;
-}
- 
-#pie {
-  clear: both;
-}
-*/
-#cabecera {
-  width: 100%;
-  background-color: #ebf5fc;
-}
-
-#menu {
-  float: left;
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ebf5fc;
-}
-
-#contenido {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ebf5fc;
-}
-
-#contenido-secundario {
-  float: left;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #ebf5fc;
-}
-
-#footer {
-  background-color: #952F57;
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-}
-
-/**/
-
-
-/*Diseño de los contenedores de los usuarios */
-/*
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-*/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebf5fc;
+  flex-direction: column;
+}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1200px;
+  min-height: calc(100vh - 30px);
   flex-wrap: wrap;
   padding: 40px 0;
 }
 
 .container .card {
+  z-index: 10;
   position: relative;
   width: 320px;
   height: 440px;
@@ -119,7 +55,7 @@
 .container .card:hover .box {
   transform: translateY(-50px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(45deg, #b95ce4, #4f29cd);
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
 }
 
 .container .card .box .content {
@@ -178,40 +114,126 @@
   background: #ff568f;
 }
 
+.container .logoipn {
+  margin-right: 30px;
+  width: 180px;
+}
 
+.container .logoescom {
+  margin-left: 30px;
+  width: 180px;
+}
 
-/*Estilo para el pie de la pagina principal*/
-
-
-.center{
+.footer {
+  position: relative;
+  min-width: 100%;
+  min-height: 150px;
+  background-color: #800040;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.5);
 }
 
-.icon{
+.footer .icon {
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
-  height: 65px;
-  margin: 20px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgb(143, 125, 125);
   cursor: pointer;
-  border-radius: 50px;
-  transition: all .4s;
+  transition: 0.4s;
 }
 
-.icon:nth-child(1):hover{
+.footer .icon:hover {
   box-shadow: 0px 10px #ffff;
+  background: #222;
 }
 
-.icon:nth-child(2):hover{
-  box-shadow:  0px 10px #ffff;
-}
-
-.fa-facebook-f{
-  color:#ffff;
+.footer i {
+  font-size: 2em;
+  color: #fff;
   filter: drop-shadow(10px 10px 10px #ffff);
 }
 
-.fa-twitter{
-  color:#ffff;
-  filter: drop-shadow(10px 10px 10px #ffff);
+.menu {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu:hover {
+  transform: rotate(90deg);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#222, #800040);
+  box-shadow: 10px -5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: -1000px;
+  width: 30%;
+  min-height: calc(100% - 30px);
+  padding: 75px 0;
+  transition: 0.4s;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar i {
+  position: absolute;
+  color: #fff;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.sidebar i:hover {
+  transform: rotate(360deg);
+}
+
+.sidebar .contenido {
+  padding-left: 30px;
+  color: #fff;
+  text-decoration: none;
+  min-height: 50px;
+  line-height: 50px;
+  transition: 0.3s;
+}
+
+.sidebar .contenido:hover {
+  color: #222;
+  background-color: #fff;
+  padding-left: 40px;
+}
+
+@media (max-width: 1179px) {
+  .container .logoipn {
+    display: none;
+  }
+
+  .container .logoescom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100vh;
+  }
 }
