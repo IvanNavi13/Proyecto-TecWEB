@@ -11,7 +11,7 @@
     $nombre = $_POST['nombre'];
     $paterno = $_POST['paterno'];
     $materno = $_POST['materno'];
-    $fecha = $_POST['fecha'];
+    $fechaNacimiento = $_POST['fechaNacimiento'];
     $genero = $_POST['genero'];
    // $masculino = $_POST['masculino'];
    // $femenino = $_POST['femenino'];

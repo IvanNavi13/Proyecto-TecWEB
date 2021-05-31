@@ -14,7 +14,7 @@ class database
         $this->usuario = 'root';
         $this->clave = '';
         $this->servidor = 'localhost';
-        $this->nombreBD = 'phpescom';       
+        $this->nombreBD = 'proyectoWEB';       
     }
 
     public function obtenerConexion()
