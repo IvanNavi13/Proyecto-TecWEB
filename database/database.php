@@ -10,9 +10,9 @@ class database
     public $conexion;
 
     public function __construct()
-    {
-        $this->usuario = 'root';
-        $this->clave = 'Dina';
+    {													//Colocar los datos de su respectivo servidor de MySQL
+        $this->usuario = 'root';						// <--
+        $this->clave = 'Dina';							// <--
         $this->servidor = 'localhost';
         $this->nombreBD = 'proyectoWEB';       
     }
@@ -24,12 +24,17 @@ class database
 
 	//------------------------------------Alumno
 
-	public function cAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle, $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn){
-		$consulta = "INSERT INTO Alumno (boleta, nombre, paterno, materno, fechaNacimiento, genero, curp, calle, colonia, cp, tel, email, otros, promedio, opcion, contraseña, ficha, noCuenta, idEscu, idEnti) VALUES ('$boleta', '$nombreA', '$paterno', '$materno', '$fechaN', '$genero', '$curp', '$calle', '$colonia', '$cp', '$tel', '$email', '$otros', '$promedio', '$opcion', '$contraseña', '$ficha', '$noCuenta', '$idEs', '$idEn')";
+	public function cAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle, $colonia,
+							$cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn){
+		$consulta = "INSERT INTO Alumno (boleta, nombre, paterno, materno, fechaNacimiento, genero, curp, calle, colonia, cp,
+								tel, email, otros, promedio, opcion, contraseña, ficha, noCuenta, idEscu, idEnti) 
+		VALUES ('$boleta', '$nombreA', '$paterno', '$materno', '$fechaN', '$genero', '$curp', '$calle', '$colonia', '$cp', 
+				'$tel', '$email', '$otros', '$promedio', '$opcion', '$contraseña', '$ficha', '$noCuenta', '$idEs', '$idEn')";
+
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
 	    	?> 
-	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+	    	<h3 class="ok">¡Te has inscrito correctamente!</h3>
            <?php
 	    } else {
 	    	?> 
@@ -45,8 +50,12 @@ class database
 		return $columna;
 	}
 	
-	public function uAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle, $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn){
-		$consulta = "UPDATE Alumno SET nombre = '$nombreA', paterno = '$paterno', materno = '$materno', fechaNacimiento = '$fechaN', genero = '$genero', curp = '$curp', calle = '$calle', colonia = '$colonia', cp = '$cp', tel = '$tel', email = '$email', otros = '$otros', promedio = '$promedio', opcion = '$opcion', contraseña = '$contraseña', ficha = '$ficha', noCuenta = '$noCuenta', idEscu = '$idEs', idEnti = '$idEn' WHERE boleta = '$boleta'";
+	public function uAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle, $colonia, $cp,
+						    $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn){
+		$consulta = "UPDATE Alumno SET nombre = '$nombreA', paterno = '$paterno', materno = '$materno', fechaNacimiento = '$fechaN',
+					genero = '$genero', curp = '$curp', calle = '$calle', colonia = '$colonia', cp = '$cp', tel = '$tel', email = '$email',
+					otros = '$otros', promedio = '$promedio', opcion = '$opcion', contraseña = '$contraseña', ficha = '$ficha',
+					noCuenta = '$noCuenta', idEscu = '$idEs', idEnti = '$idEn' WHERE boleta = '$boleta'";
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
 	    	?> 
@@ -73,7 +82,7 @@ class database
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
 	    	?> 
-	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+	    	<h3 class="ok">¡Te has inscrito correctamente!</h3>
            <?php
 	    } else {
 	    	?> 
@@ -94,14 +103,15 @@ class database
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
 	    	?> 
-	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+	    	<h3 class="ok">¡Te has inscrito correctamente!</h3>
            <?php
 	    } else {
 	    	?> 
 	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>
            <?php
 	    }
-	
+	}
+
 	public function dAdmin($noCuenta){
 		$consulta = "DELETE FROM administrador WHERE noCuenta ='$noCuenta'";
 		$resultado = mysqli_query($this ->conexion, $consulta );
@@ -116,7 +126,7 @@ class database
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
 	    	?> 
-	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+	    	<h3 class="ok">¡Te has inscrito correctamente!</h3>
            <?php
 	    } else {
 	    	?> 
@@ -137,13 +147,14 @@ class database
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
 	    	?> 
-	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+	    	<h3 class="ok">¡Te has inscrito correctamente!</h3>
            <?php
 	    } else {
 	    	?> 
 	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>
            <?php
 	    }
+	}
 	
 	public function dExamen($ficha){
 		$consulta = "DELETE FROM examen WHERE ficha ='$ficha'";
@@ -152,7 +163,7 @@ class database
 		return $columna;
 	}
 	
-
 	
 }
 ?>
+

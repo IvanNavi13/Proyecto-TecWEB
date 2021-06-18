@@ -7,34 +7,33 @@
     //$result = $db->create( $query );
     
 
-    $boleta = $_POST['boleta'];
+    $boleta  = $_POST['boleta'];
     $nombreA = $_POST['nombre'];
     $paterno = $_POST['paterno'];
     $materno = $_POST['materno'];
-    $fechaN = $_POST['fechaNacimiento'];
-    $genero = $_POST['genero'];
+    $fechaN  = $_POST['fechaNacimiento'];
+    $genero  = $_POST['genero'];
    // $masculino = $_POST['masculino'];
    // $femenino = $_POST['femenino'];
    // $otro = $_POST['otro'];
-    $curp = $_POST['curp'];
-    $calle = $_POST['calle'];
+    $curp    = $_POST['curp'];
+    $calle   = $_POST['calle'];
     $colonia = $_POST['colonia'];
-    $cp = $_POST['cp'];
-    $tel = $_POST['tel'];
-    $email = $_POST['email']; 
-    $idEs = $_POST['escuela'];
-    $otros = $_POST['otros'];
-    $idEn = $_POST['entidad'];
+    $cp      = $_POST['cp'];
+    $tel     = $_POST['tel'];
+    $email   = $_POST['email']; 
+    $idEs    = $_POST['escuela'];
+    $otros   = $_POST['otros'];
+    $idEn    = $_POST['entidad'];
     $promedio = $_POST['promedio'];
-    $opcion = $_POST['opcion'];
+    $opcion  = $_POST['opcion'];
     $contraseña = strtoupper($paterno);
 	
-	if(db->)
+	//if(db->)
 	
-	$db->cAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle, $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn);
+	$db->cAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle,
+              $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn);
 	
-	
-    
 ?>
 
 
