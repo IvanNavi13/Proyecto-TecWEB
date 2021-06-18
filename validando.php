@@ -1,17 +1,17 @@
 <?php
-    /*  conexion a la base de datos  
-    require( './database/database.php');
+     // conexion a la base de datos  
+    include( './database/database.php');
     //$query = "CALL phpescom.sp_insert_usuario('$nombre','$paterno','$materno','$nacimiento','$curp','$sexo','$clave')";
     $db = new database();
     $db->obtenerConexion();
-    $result = $db->create( $query );
-    */
+    //$result = $db->create( $query );
+    
 
     $boleta = $_POST['boleta'];
-    $nombre = $_POST['nombre'];
+    $nombreA = $_POST['nombre'];
     $paterno = $_POST['paterno'];
     $materno = $_POST['materno'];
-    $fechaNacimiento = $_POST['fechaNacimiento'];
+    $fechaN = $_POST['fechaNacimiento'];
     $genero = $_POST['genero'];
    // $masculino = $_POST['masculino'];
    // $femenino = $_POST['femenino'];
@@ -22,12 +22,19 @@
     $cp = $_POST['cp'];
     $tel = $_POST['tel'];
     $email = $_POST['email']; 
-    $escuela = $_POST['escuela'];
+    $idEs = $_POST['escuela'];
     $otros = $_POST['otros'];
-    $entidad = $_POST['entidad'];
+    $idEn = $_POST['entidad'];
     $promedio = $_POST['promedio'];
     $opcion = $_POST['opcion'];
     $contraseña = strtoupper($paterno);
+	
+	if(db->)
+	
+	$db->cAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle, $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn);
+	
+	
+    
 ?>
 
 
@@ -50,7 +57,7 @@
         echo "<h1>Hola $nombre</h1>";
         echo "<h1>Hola $paterno</h1>";
         echo "<h1>Hola $materno</h1>";
-        echo "<h1>Hola $fecha</h1>";
+        echo "<h1>Hola $fechaNacimiento</h1>";
         echo "<h1>Hola $genero</h1>";
         echo "<h1>Hola $curp</h1>";
         echo "<h1>Hola $calle</h1>";
@@ -64,7 +71,9 @@
         echo "<h1>Hola $promedio</h1>";
         echo "<h1>Hola $opcion</h1>";
         echo "<h1>La contraseña es: $contraseña</h1>";
-
+		
+		
+		
         /* 
         if( $result )
           echo "<p>Registro éxitoso</p>";

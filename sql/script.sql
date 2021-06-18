@@ -1,3 +1,4 @@
+
 CREATE DATABASE proyectoWEB;
 USE proyectoWEB;
 
@@ -22,6 +23,7 @@ CREATE TABLE examen
   salon VARCHAR(20) NOT NULL,
   horario TIME NOT NULL,
   grupo VARCHAR(5) NOT NULL,
+  cupo INT NOT NULL,
   ficha INT NOT NULL,
   PRIMARY KEY (ficha)
 );
@@ -29,7 +31,7 @@ CREATE TABLE examen
 
 CREATE TABLE administrador
 (
-  contraseña VARBINARY(60) NOT NULL,
+  contraseña VARCHAR(60) NOT NULL,
   noCuenta VARCHAR(15) NOT NULL,
   PRIMARY KEY (noCuenta)
 );
@@ -54,7 +56,7 @@ CREATE TABLE Alumno
     otros VARCHAR (50) DEFAULT "",
     promedio DOUBLE NOT NULL,
     opcion VARCHAR (30) NOT NULL,
-    contraseña VARBINARY(60) NOT NULL,
+    contraseña VARCHAR(60) NOT NULL,
 
     ficha INT NOT NULL,
     noCuenta VARCHAR(15) NOT NULL,
@@ -68,15 +70,57 @@ CREATE TABLE Alumno
 );
 
 
----INSERTAR DATOS AL CATALOGO ESCUELA & ENTIDAD
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 1 "Gonzalo Vázquez Vela"', '01' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 2 "Miguel Bernard"', '02' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 3 "Estanislao Ramírez Ruiz"', '03' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 4 "Lázaro Cárdenas"', '04' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 5 "Benito Juárez García"', '05' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 6 "Miguel Othón de Mendizábal"', '06' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 7 "Cuauhtémoc"', '07' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 8 "Narciso Bassols García"', '08' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 9 "Juan de Dios Bátiz"', '09' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 10 "Carlos Vallejo Márquez"', '10' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 11 "Wilfrido Massieu Pérez"', '11' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 12 "José María Morelos y Pavón"', '12' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 13 "Ricardo Flores Magón"', '13' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 14 "Luis Enrique Erro"', '14' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 15 "Diódoro Antúnez Echegaray"', '15' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 16 "Hidalgo"', '16' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 17 "León-Guanajuato"', '17' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CECyT No. 18 "Zacatecas"', '18' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'CET No. 1 "Walter Cross Buchanan"', '19' );
+INSERT INTO Escuela ( nombre, idEscu) VALUES ( 'Otra', '20' );
 
-INSERT INTO Escuela ( nombre, idEscu)
-VALUES 
-( 'CECyT No. 1 "Gonzalo Vázquez Vela', '01' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Aguascalientes', '01' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Baja California', '02' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Baja California Sur', '03' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Campeche', '04' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Coahuila', '05' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Colima', '06' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Chihuahua', '07' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Ciudad de México', '08' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Durango', '09' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Estado de México', '10' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Guanajuato', '11' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Guerrero', '12' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Hidalgo', '13' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Jalisco', '14' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Michoacán', '15' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Morelos', '16' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Nayarit', '17' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Nuevo León', '18' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Oaxaca', '19' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Puebla', '20' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Querétaro', '21' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Quintana Roo', '22' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'San Luis Potosí', '23' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Sinaloa', '24' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Sonora', '25' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tabasco', '26' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tamaulipas', '27' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tlaxcala', '28' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Veracruz', '29' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Yucatán', '30' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Zacatecas', '31' );
 
-
-INSERT INTO Entidad ( nombre, idEnti)
-VALUES 
-( 'Aguascalientes', '01' );
-
-
+INSERT INTO examen (salon, horario, grupo, cupo, ficha) VALUES ( '1', '07:00:00', '1CM1', '0', '1');
