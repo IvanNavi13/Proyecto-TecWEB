@@ -12,7 +12,7 @@ class database
     public function __construct()
     {
         $this->usuario = 'root';
-        $this->clave = 'Dina';
+        $this->clave = '';
         $this->servidor = 'localhost';
         $this->nombreBD = 'proyectoWEB';       
     }

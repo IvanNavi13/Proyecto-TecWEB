@@ -12,14 +12,14 @@ class database
     public function __construct()
     {													//Colocar los datos de su respectivo servidor de MySQL
         $this->usuario = 'root';						// <--
-        $this->clave = 'Dina';							// <--
+        $this->clave = '';							// <--
         $this->servidor = 'localhost';
         $this->nombreBD = 'proyectoWEB';       
     }
 
     public function obtenerConexion()
     {
-		$this->conexion = mysqli_connect($this->servidor,$this->usuario,$this->clave,$this->nombreBD); 
+	 $this->conexion = mysqli_connect($this->servidor,$this->usuario,$this->clave,$this->nombreBD); 
     }
 
 	//------------------------------------Alumno

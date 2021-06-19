@@ -1,21 +1,15 @@
 <?php
      // conexion a la base de datos  
     include( './database/database.php');
-    //$query = "CALL phpescom.sp_insert_usuario('$nombre','$paterno','$materno','$nacimiento','$curp','$sexo','$clave')";
     $db = new database();
     $db->obtenerConexion();
-    //$result = $db->create( $query );
     
-
     $boleta  = $_POST['boleta'];
-    $nombreA = $_POST['nombre'];
+    $nombre  = $_POST['nombre'];
     $paterno = $_POST['paterno'];
     $materno = $_POST['materno'];
-    $fechaN  = $_POST['fechaNacimiento'];
+    $fechaNacimiento  = $_POST['fechaNacimiento'];
     $genero  = $_POST['genero'];
-   // $masculino = $_POST['masculino'];
-   // $femenino = $_POST['femenino'];
-   // $otro = $_POST['otro'];
     $curp    = $_POST['curp'];
     $calle   = $_POST['calle'];
     $colonia = $_POST['colonia'];
@@ -23,17 +17,24 @@
     $tel     = $_POST['tel'];
     $email   = $_POST['email']; 
     $idEs    = $_POST['escuela'];
-    $otros   = $_POST['otros'];
+    $otros   = $_POST['otros'];   //<-- ''
     $idEn    = $_POST['entidad'];
     $promedio = $_POST['promedio'];
     $opcion  = $_POST['opcion'];
     $contraseña = strtoupper($paterno);
 	
-	//if(db->)
 	
-	$db->cAlumno($boleta, $nombreA, $paterno, $materno, $fechaN, $genero, $curp, $calle,
-              $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, $ficha, $noCuenta, $idEs, $idEn);
+    $admin = $db->rAdmin('adminESCOM');
+    $admin[1];
+    
+
+	$db->cAlumno($boleta, $nombre, $paterno, $materno, $fechaNacimiento, $genero, $curp, $calle,
+              $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, "01",
+              $admin[1], $idEs, $idEn);
 	
+
+
+
 ?>
 
 
@@ -64,12 +65,14 @@
         echo "<h1>Hola $cp</h1>";
         echo "<h1>Hola $tel</h1>";
         echo "<h1>Hola $email</h1>";
-        echo "<h1>Hola $escuela</h1>";
+        echo "<h1>Hola $idEs   <--------Es</h1>";
         echo "<h1>Hola $otros</h1>";
-        echo "<h1>Hola $entidad</h1>";
+        echo "<h1>Hola $idEn   <--------En</h1>";
         echo "<h1>Hola $promedio</h1>";
         echo "<h1>Hola $opcion</h1>";
         echo "<h1>La contraseña es: $contraseña</h1>";
+
+        print_r($admin[1]);
 		
 		
 		

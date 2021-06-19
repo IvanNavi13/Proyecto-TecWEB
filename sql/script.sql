@@ -40,7 +40,7 @@ CREATE TABLE administrador
 CREATE TABLE Alumno
 (
     boleta INT(10) NOT NULL,
- 	nombre VARCHAR(60)  NOT NULL,
+ 	  nombre VARCHAR(60)  NOT NULL,
     paterno VARCHAR(60)  NOT NULL,
     materno VARCHAR(60)  NOT NULL, 
     fechaNacimiento DATE DEFAULT '2000-01-01',
@@ -97,30 +97,34 @@ INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Baja California Sur',  '03' );
 INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Campeche',             '04' );
 INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Coahuila',             '05' );
 INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Colima',               '06' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Chihuahua',            '07' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Ciudad de México',     '08' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Durango',              '09' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Estado de México',     '10' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Guanajuato',           '11' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Guerrero',             '12' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Hidalgo',              '13' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Jalisco',              '14' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Michoacán',            '15' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Morelos',              '16' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Nayarit',              '17' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Nuevo León',           '18' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Oaxaca',               '19' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Puebla',               '20' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Querétaro',            '21' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Quintana Roo',         '22' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'San Luis Potosí',      '23' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Sinaloa',              '24' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Sonora',               '25' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tabasco',              '26' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tamaulipas',           '27' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tlaxcala',             '28' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Veracruz',             '29' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Yucatán',              '30' );
-INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Zacatecas',            '31' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Chiapas',              '07' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Chihuahua',            '08' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Ciudad de México',     '09' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Durango',              '10' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Estado de México',     '11' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Guanajuato',           '12' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Guerrero',             '13' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Hidalgo',              '14' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Jalisco',              '15' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Michoacán',            '16' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Morelos',              '17' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Nayarit',              '18' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Nuevo León',           '19' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Oaxaca',               '20' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Puebla',               '21' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Querétaro',            '22' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Quintana Roo',         '23' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'San Luis Potosí',      '24' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Sinaloa',              '25' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Sonora',               '26' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tabasco',              '27' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tamaulipas',           '28' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Tlaxcala',             '29' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Veracruz',             '30' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Yucatán',              '31' );
+INSERT INTO Entidad ( nombre, idEnti) VALUES ( 'Zacatecas',            '32' );
+
+
+INSERT INTO administrador (contraseña, noCuenta) VALUES ( 'admin123', 'adminESCOM');
 
 INSERT INTO examen (salon, horario, grupo, cupo, ficha) VALUES ( '1', '07:00:00', '1CM1', '0', '1');
