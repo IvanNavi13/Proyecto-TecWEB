@@ -33,20 +33,33 @@ class database
 
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
-	    	?> 
-	    	<h3 class="ok">¡Te has inscrito correctamente!</h3>
-           <?php
+	    	return '<div id="modal-contenedor" class="modal-contenedor active">
+      				<div class="modal-contenido">
+        				<i id="close-modal" class="fas fa-times"></i>
+        				<h3 class="modal-titulo">¡REGISTRO EXITOSO!</h3>
+        				<div class="modal-cuerpo">
+          					En caso de quiera cambiar su informacio hay una opcion que lo permite,
+          					de lo contrario puede obtner el pdf con toda la información
+        				</div>
+      				</div>
+    			</div>';
 	    } else {
-	    	?> 
-	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>
-           <?php
+			return '<div id="modal-contenedor" class="modal-contenedor active">
+      				<div class="modal-contenido">
+        				<i id="close-modal" class="fas fa-times"></i>
+        				<h3 class="modal-titulo">¡ALGO SALIO MAL!</h3>
+        				<div class="modal-cuerpo">
+          					Por favor ponte en contacto con el personal de la escuela.
+        				</div>
+      				</div>
+    			</div>';
 	    }
     }  
 	    	
 	public function rAlumno($boleta){
 		$consulta = "SELECT * FROM Alumno WHERE boleta='$boleta'";
-		$resultado = mysqli_query($this ->conexion, $consulta );
-		$columna = mysqli_fetch_array( $resultado );
+		$resultado = mysqli_query($this->conexion, $consulta );
+		$columna = mysqli_fetch_array($resultado);
 		return $columna;
 	}
 	
@@ -58,13 +71,19 @@ class database
 					noCuenta = '$noCuenta', idEscu = '$idEs', idEnti = '$idEn' WHERE boleta = '$boleta'";
 		$resultado = mysqli_query($this ->conexion,$consulta);
 	    if ($resultado) {
-	    	?> 
-	    	<h3 class="ok">¡Se actualizo correctamente!</h3>
-           <?php
+	    	    return '<div id="modal-contenedor" class="modal-contenedor active">
+      				<div class="modal-contenido">
+        				<i id="close-modal" class="fas fa-times"></i>
+        				<h3 class="modal-titulo">¡ACTUALIZASTE TUS DATOS!</h3>
+        				<div class="modal-cuerpo">
+          					En caso de quiera cambiar su informacio hay una opcion que lo permite,
+          					de lo contrario puede obtner el pdf con toda la información
+        				</div>
+      				</div>
+    			</div>';
+           
 	    } else {
-	    	?> 
-	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>
-           <?php
+    
 	    }
     }
 	

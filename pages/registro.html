@@ -1,47 +1,3 @@
-<?php
-     // conexion a la base de datos  
-    include( './database/database.php');
-    $db = new database();
-    $db->obtenerConexion();
-    $a = $db->rAlumno("2020630401");
-    
-    $boleta  = $_POST['boleta'];
-    $nombre  = $_POST['nombre'];
-    $paterno = $_POST['paterno'];
-    $materno = $_POST['materno'];
-    $fechaNacimiento  = $_POST['fechaNacimiento'];
-    $genero  = $_POST['genero'];
-    $curp    = $_POST['curp'];
-    $calle   = $_POST['calle'];
-    $colonia = $_POST['colonia'];
-    $cp      = $_POST['cp'];
-    $tel     = $_POST['tel'];
-    $email   = $_POST['email']; 
-    $idEs    = $_POST['escuela'];
-    $otros   = $_POST['otros'];   //<-- ''
-    $idEn    = $_POST['entidad'];
-    $promedio = $_POST['promedio'];
-    $opcion  = $_POST['opcion'];
-    $contraseña = strtoupper($paterno);
-	
-	
-    $admin = $db->rAdmin('adminESCOM');
-    $admin[1];
-    
-
-    if($a[0] != ""){
-     $m = $db->uAlumno($boleta, $nombre, $paterno, $materno, $fechaNacimiento, $genero, $curp, $calle,
-              $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, "01",
-              $admin[1], $idEs, $idEn);
-    }
-    else{
-	    $db->rAlumno($boleta, $nombre, $paterno, $materno, $fechaNacimiento, $genero, $curp, $calle,
-              $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, "01",
-              $admin[1], $idEs, $idEn);
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,8 +22,8 @@
       crossorigin="anonymous"
     ></script>
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/registro.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/registro.css" />
   </head>
   <body>
     <i id="menu" class="menu fas fa-bars"></i>
@@ -82,7 +38,7 @@
     </div>
 
     <div class="container">
-      <img class="logoipn" src="./images/logoIpn.png" alt="" />
+      <img class="logoipn" src="../images/logoIpn.png" alt="" />
       <div class="card">
         <div class="box">
           <div class="content">
@@ -92,17 +48,26 @@
               Favor de verificar que la informacion que proporcionate sea
               correcta
             </p>
-            <a href="./database/formupdate.php">ACTUALIZAR DATOS</a>
+            <a href="../database/formupdate.php">ACTUALIZAR DATOS</a>
             <a href="#">REENVIAR PDF</a>
             <a href="#">ABRIR PDF</a>
           </div>
         </div>
       </div>
 
-      <img class="logoescom" src="./images/logoEscom.png" alt="" />
+      <img class="logoescom" src="../images/logoEscom.png" alt="" />
     </div>
 
-   <?php echo $m ?>
+    <div id="modal-contenedor" class="modal-contenedor active">
+      <div class="modal-contenido">
+        <i id="close-modal" class="fas fa-times"></i>
+        <h3 class="modal-titulo">¡REGISRO EXITOSO!</h3>
+        <div class="modal-cuerpo">
+          En caso de quiera cambiar su informacio hay una opcion que lo permite,
+          de lo contrario puede obtner el pdf con toda la información
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="icon">
