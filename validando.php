@@ -3,7 +3,7 @@
     include( './database/database.php');
     $db = new database();
     $db->obtenerConexion();
-    $a = $db->rAlumno("2020630401");
+    $a = $db->rAlumno($_POST['boleta']);
     
     $boleta  = $_POST['boleta'];
     $nombre  = $_POST['nombre'];
@@ -29,13 +29,13 @@
     $admin[1];
     
 
-    if($a[0] != ""){
+    if(!empty($a)){
      $m = $db->uAlumno($boleta, $nombre, $paterno, $materno, $fechaNacimiento, $genero, $curp, $calle,
               $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, "01",
               $admin[1], $idEs, $idEn);
     }
     else{
-	    $db->rAlumno($boleta, $nombre, $paterno, $materno, $fechaNacimiento, $genero, $curp, $calle,
+	    $m = $db->cAlumno($boleta, $nombre, $paterno, $materno, $fechaNacimiento, $genero, $curp, $calle,
               $colonia, $cp, $tel, $email, $otros, $promedio, $opcion, $contraseña, "01",
               $admin[1], $idEs, $idEn);
     }

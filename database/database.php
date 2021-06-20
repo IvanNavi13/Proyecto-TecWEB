@@ -55,7 +55,24 @@ class database
     			</div>';
 	    }
     }  
-	    	
+	  
+	public function sAlumno($busqueda){
+
+		$consulta = "SELECT * FROM Alumno";
+
+		if($busqueda != ""){
+			$consulta = "SELECT * FROM alumno WHERE nombre LIKE '%".$busqueda."%' OR boleta LIKE '%".$busqueda."%'";
+		}
+
+		$resultado = mysqli_query($this->conexion, $consulta );
+		
+		$rows = array();
+		while($r = mysqli_fetch_assoc($resultado)) {
+    	$rows[] = $r;
+		}
+		return $rows;
+	}
+
 	public function rAlumno($boleta){
 		$consulta = "SELECT * FROM Alumno WHERE boleta='$boleta'";
 		$resultado = mysqli_query($this->conexion, $consulta );

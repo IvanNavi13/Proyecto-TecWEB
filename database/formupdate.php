@@ -3,7 +3,7 @@
     include( './database.php');
     $db = new database();
     $db->obtenerConexion();
-    $a = $db->rAlumno("2020630401");
+    $a = $db->rAlumno($_POST["id"]);
 ?>
 
 <!DOCTYPE html>

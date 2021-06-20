@@ -19,6 +19,7 @@ body {
   position: fixed;
   top: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 80px;
@@ -33,12 +34,46 @@ body {
   cursor: pointer;
 }
 
+.header .search-box {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header .search-box i {
+  font-size: 1.5em;
+}
+
+.header .search-box:hover i {
+  color: #800040;
+}
+
+.header .search-box input {
+  margin-right: 25px;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  outline: none;
+  float: left;
+  padding: 0px 5px;
+  color: #222;
+  font-size: 14px;
+  transition: 0.4s;
+  line-height: 40px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
-  width: 80%;
+  width: 90%;
+}
+
+.container .titulo h1 {
+  color: #fff;
+  padding: 0px 10px;
+  text-align: center;
 }
 
 .container .encabezado {
@@ -72,44 +107,29 @@ body {
   font-size: 1.2em;
 }
 
-.container .encabezado .boleta {
-  color: #222;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-left: 15px;
+.container .agregar i {
+  cursor: pointer;
 }
 
-.container .encabezado .nombre {
-  color: #222;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-left: 120px;
-}
-
-.container .encabezado .horario {
-  color: #222;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-left: 100px;
-}
-
-.container .encabezado .lab {
-  color: #222;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin-left: 45px;
+#data {
+  min-width: 85%;
 }
 
 .container .alumno {
   background: #800040;
   height: 50px;
-  min-width: 80%;
+  min-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 25px;
+  padding: 0px 15px;
   margin-bottom: 10px;
   border: 2px solid #000;
+}
+
+.container .alumno .nombre {
+  width: 250px;
+  overflow: hidden;
 }
 
 .container .alumno div {
@@ -121,4 +141,56 @@ body {
   color: #fff;
   font-size: 1.2em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 934px) {
+  .container .encabezado {
+    display: none;
+  }
+
+  #data {
+    min-width: 90%;
+  }
+
+  .container .alumno div {
+    font-size: 1.2em;
+  }
+
+  .container .alumno .horario {
+    display: none;
+  }
+
+  .container .alumno .lab {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .container .encabezado {
+    display: none;
+  }
+
+  .container {
+    min-width: 100%;
+  }
+
+  #data {
+    min-width: 98%;
+  }
+
+  .container .alumno .nombre {
+    width: 120px;
+  }
+
+  .container .alumno div {
+    font-size: 0.8em;
+  }
+
+  .container .alumno .horario {
+    display: none;
+  }
+
+  .container .alumno .lab {
+    display: none;
+  }
 }
