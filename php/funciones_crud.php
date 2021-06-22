@@ -27,9 +27,9 @@ switch ($_POST["opcion"]) {
           '"class="actualizar"
           ><i class="fas fa-pen"></i
           ></a>
-          <div id=' .
+          <a href="../php/actualizar.php" id=' .
           $a[$i]["boleta"] .
-          ' class="eliminar"><i id="2020630401" class="fas fa-trash"></i></div>
+          ' class="eliminar"><i class="fas fa-trash"></i></a>
           </div>
           ';
       }

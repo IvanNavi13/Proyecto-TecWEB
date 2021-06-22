@@ -2,11 +2,8 @@ $(buscar_datos(""));
 
 $(document).ready(function () {
   $(".eliminar").click(function () {
-    let result = confirm("¿ESTA SEGURO?");
-    if (result) {
-      console.log();
-      borrar_datos($(this).attr("id"));
-    }
+    console.log("eliminar");
+    borrar_datos($(this).attr("id"));
   });
 });
 

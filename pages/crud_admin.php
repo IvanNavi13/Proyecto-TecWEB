@@ -48,7 +48,7 @@ if (!empty($_SESSION["modal"])) {
     />
     <link rel="stylesheet" href="../styles/crud.css?v=<?php echo rand(); ?>" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="../js/funciones.js"></script>
+    <script src="../js/funciones.js?v=<?php echo rand(); ?>"></script>
   </head>
   <body>
   <div id="sidebar" class="sidebar">

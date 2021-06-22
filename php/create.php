@@ -73,6 +73,7 @@
             id="boleta"
             name="boleta"
             placeholder="No. De Boleta"
+            pattern="^(P(P|E)|[0-9]{2})[0-9]{8}$"
           />
         </div>
         <div class="col-lg-4">
@@ -142,7 +143,7 @@
         </div>
         <div class="col-lg-12">
           <label for="materno" class="form-label">CURP</label>
-          <input required type="text" class="form-control" id="curp" name="curp" />
+          <input pattern="^[A-Z]{4}[0-9]{6}[A-Z]{6}([A-Z]|[0-9]){2}$" required type="text" class="form-control" id="curp" name="curp" />
         </div>
         <h2 class="mt-4 text-white">Contacto</h2>
         <div class="col-lg-4">
@@ -155,7 +156,7 @@
         </div>
         <div class="col-lg-4">
           <label for="cp" class="form-label">Código Postal</label>
-          <input required type="number" class="form-control" id="cp" name="cp" control="false" />
+          <input pattern="^[0-9]{5}$" required type="number" class="form-control" id="cp" name="cp" control="false" />
         </div>
         <div class="col-lg-6">
           <label for="tel" class="form-label">Teléfono o Celular</label>
@@ -236,7 +237,7 @@
         </div>
         <div class="col-lg-6">
           <label for="promedio" class="form-label">Promedio</label>
-          <input required value="" type="number" step="0.01" class="form-control" id="promedio" name="promedio" value="0.0" />
+          <input pattern="^\d(\.\d+)?$|^10(\.0+)?$" required value="" type="number" step="0.01" class="form-control" id="promedio" name="promedio" value="0.0" />
         </div>
         <div class="col-lg-6">
           <label for="opcion" class="form-label">ESCOM Fue Tu</label>
