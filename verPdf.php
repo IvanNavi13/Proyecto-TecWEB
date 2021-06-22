@@ -13,6 +13,8 @@ $db = new database();
 $db->obtenerConexion();
 
 $a = $db->rAlumno($_SESSION["idUser"]);
+$es = $db->rEscu($a[18]);
+$en = $db->rEnti($a[19]);
 
 $boleta = $a[0];
 $nombre = $a[1];
@@ -26,9 +28,9 @@ $colonia = $a[8];
 $cp = $a[9];
 $tel = $a[10];
 $email = $a[11];
-$idEs = $a[18];
+$idEs = $es[0];
 $otros = $a[12]; //<-- ''
-$idEn = $a[19];
+$idEn = $en[0];
 $promedio = $a[13];
 $opcion = $a[14];
 $contraseña = strtoupper($paterno);

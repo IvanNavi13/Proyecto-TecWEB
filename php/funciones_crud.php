@@ -7,7 +7,9 @@ $db->obtenerConexion();
 switch ($_POST["opcion"]) {
   case "consulta":
     $a = $db->sAlumno($_POST["consulta"]);
-    for ($i = 0; $i < count($a); $i++) {
+    
+    for ($i = 0; $i < 25; $i++) {
+      $h = $db->rExamen($a[$i]["ficha"]);
       echo '
         <div class="alumno">
         <div class="boleta">' .
@@ -18,16 +20,13 @@ switch ($_POST["opcion"]) {
         " " .
         $a[$i]["materno"] .
         '</div>
-        <div class="horario">7:00 AM</div>
-        <div class="lab">LAB-12</div>
+        <div class="horario">'.$h[1].'</div>
+        <div class="lab">LAB-'.$h[0].'</div>
         <a href="../php/update.php?id=' .
         $a[$i]["boleta"] .
         '"class="actualizar"
         ><i class="fas fa-pen"></i
         ></a>
-        <div id=' .
-        $a[$i]["boleta"] .
-        ' class="cambiar"><i class="fas fa-calendar-week"></i></div>
         <div id=' .
         $a[$i]["boleta"] .
         ' class="eliminar"><i id="2020630401" class="fas fa-trash"></i></div>

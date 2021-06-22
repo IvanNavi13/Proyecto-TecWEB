@@ -86,10 +86,8 @@ $mail->AltBody = "Esto es una prueba SIN :c codigo HtML";
 //Attach an image file
 $mail->addAttachment("../storage/{$_SESSION["idUser"]}.pdf"); //<--Aqui se coloca el pdf
 
-$val = $mail->send();
-
 //send the message, check for errors
-if (!$val) {
+if (!$mail->send()) {
   $_SESSION["modal"] = "error";
   header("location: ../pages/alumno.php");
 } else {

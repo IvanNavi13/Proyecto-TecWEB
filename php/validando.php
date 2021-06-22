@@ -23,6 +23,18 @@ $promedio = $_POST["promedio"];
 $opcion = $_POST["opcion"];
 $contraseña = strtoupper($paterno);
 
+$al = $db->rAlumno($boleta);
+
+session_start();
+if(!empty($al)){
+  if (!empty($_SESSION["admin"])) {
+    header("Location: ../pages/crud_admin.php");
+  } else {
+    header("Location: ../pages/login_alumno.php");
+    session_destroy();
+  }
+}
+
 $admin = $db->rAdmin("adminESCOM");
 $admin[1];
 $horario = 1;
@@ -59,7 +71,7 @@ $res = $db->cAlumno(
   $idEn
 );
 
-session_start();
+
 if (!empty($_SESSION["admin"])) {
   if ($res) {
     $_SESSION["modal"] = "success";

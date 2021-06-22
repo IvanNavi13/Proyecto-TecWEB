@@ -67,7 +67,7 @@
         <div class="col-lg-12">
           <label for="boleta" class="form-label">No. De Boleta</label>
           <input
-            
+            required
             type="text"
             class="form-control"
             id="boleta"
@@ -77,19 +77,19 @@
         </div>
         <div class="col-lg-4">
           <label for="nombre" class="form-label">Nombre(S)</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" />
+          <input required type="text" class="form-control" id="nombre" name="nombre" />
         </div>
         <div class="col-lg-4">
           <label for="paterno" class="form-label">Apellido Paterno</label>
-          <input type="text" class="form-control" id="paterno" name="paterno" />
+          <input required type="text" class="form-control" id="paterno" name="paterno" />
         </div>
         <div class="col-lg-4">
           <label for="materno" class="form-label">Apellido Materno</label>
-          <input type="text" class="form-control" id="materno" name="materno" />
+          <input required type="text" class="form-control" id="materno" name="materno" />
         </div>
         <div class="col-sm-12 col-lg-4">
           <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
-          <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" />
+          <input required type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" />
         </div>
         <div
           class="
@@ -140,33 +140,33 @@
         </div>
         <div class="col-lg-12">
           <label for="materno" class="form-label">CURP</label>
-          <input type="text" class="form-control" id="curp" name="curp" />
+          <input required type="text" class="form-control" id="curp" name="curp" />
         </div>
         <h2 class="mt-4 text-white">Contacto</h2>
         <div class="col-lg-4">
           <label for="calle" class="form-label">Calle y Número</label>
-          <input type="text" class="form-control" id="calle" name="calle" />
+          <input required type="text" class="form-control" id="calle" name="calle" />
         </div>
         <div class="col-lg-4">
           <label for="colonia" class="form-label">Colonia</label>
-          <input type="text" class="form-control" id="colonia" name="colonia" />
+          <input required type="text" class="form-control" id="colonia" name="colonia" />
         </div>
         <div class="col-lg-4">
           <label for="cp" class="form-label">Código Postal</label>
-          <input type="number" class="form-control" id="cp" name="cp" control="false" />
+          <input required type="number" class="form-control" id="cp" name="cp" control="false" />
         </div>
         <div class="col-lg-6">
           <label for="tel" class="form-label">Teléfono o Celular</label>
-          <input type="tel" class="form-control" id="tel" name="tel" />
+          <input required type="tel" class="form-control" id="tel" name="tel" />
         </div>
         <div class="col-lg-6">
           <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="email" name="email" control="emial" />
+          <input required type="email" class="form-control" id="email" name="email" control="emial" />
         </div>
         <h2 class="mt-4 text-white">Procendencia</h2>
         <div class="col-lg-6">
           <label for="escuela" class="form-label">Escuela de Procedencia</label>
-          <select class="form-select" id="escuela" name="escuela">
+          <select required class="form-select" id="escuela" name="escuela">
             <option value="" selected>Selecciona una escuela...</option>
             <option  value="01" >CECyT No. 1 "Gonzalo Vázquez Vela"</option>
             <option  value="02" >CECyT No. 2 "Miguel Bernard"</option>
@@ -192,11 +192,11 @@
         </div>
         <div class="otro col-lg-6">
           <label for="otros" class="form-label">Indique cual es:</label>
-          <input type="text" class="form-control" id="otros" name="otros" />
+          <input  type="text" class="form-control" id="otros" name="otros" />
         </div>
         <div class="col-lg-6">
           <label for="entidad" class="form-label">Entidad Federativa</label>
-          <select class="form-select" id="entidad" name="entidad">
+          <select required class="form-select" id="entidad" name="entidad">
             <option value="" selected>Selecciona una Entidad Federativa...</option>
             <option  value="01" >Aguascalientes</option>
             <option  value="02">Baja California</option>
@@ -234,11 +234,11 @@
         </div>
         <div class="col-lg-6">
           <label for="promedio" class="form-label">Promedio</label>
-          <input value="" type="number" step="0.01" class="form-control" id="promedio" name="promedio" value="0.0" />
+          <input required value="" type="number" step="0.01" class="form-control" id="promedio" name="promedio" value="0.0" />
         </div>
         <div class="col-lg-6">
           <label for="opcion" class="form-label">ESCOM Fue Tu</label>
-          <select class="form-select" id="opcion" name="opcion">
+          <select required class="form-select" id="opcion" name="opcion">
             <option value="" selected>Selecciona una Opci&oacute;n...</option>
             <option >1era Opci&oacute;n</option>
             <option >2da Opci&oacute;n</option>

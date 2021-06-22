@@ -215,5 +215,21 @@ class database
     $columna = mysqli_fetch_array($resultado);
     return $columna;
   }
+
+  public function rEscu($id){
+    $consulta = "SELECT * FROM escuela WHERE idEscu='$id'";
+    $resultado = mysqli_query($this->conexion, $consulta);
+    $columna = mysqli_fetch_array($resultado);
+    return $columna;
+  }
+
+  public function rEnti($id){
+    $consulta = "SELECT * FROM entidad WHERE idEnti='$id'";
+    $resultado = mysqli_query($this->conexion, $consulta);
+    $columna = mysqli_fetch_array($resultado);
+    return $columna;
+  }
+
+
 }
 ?>

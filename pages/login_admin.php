@@ -77,10 +77,16 @@ if (!empty($_SESSION["admin"])) {
     <div id="sidebar" class="sidebar">
       <i id="close" class="fas fa-times"></i>
       <a href="../index.html" class="contenido">Inicio</a>
-      <a href="#" class="contenido">contenido2</a>
-      <a href="#" class="contenido">contenido3</a>
-      <a href="#" class="contenido">contenido4</a>
-      <a href="#" class="contenido">contenido5</a>
+      <a href="https://www.escom.ipn.mx/" class="contenido">ESCOM</a>
+      <a href="https://www.ipn.mx/" class="contenido">IPN</a>
+      <a
+        href="https://www.saes.escom.ipn.mx/default.aspx?AspxAutoDetectCookieSupport=1"
+        class="contenido"
+        >SAES</a
+      >
+      <a href="https://www.ipn.mx/calendario-academico.html" class="contenido"
+        >CALENDARIO</a
+      >
     </div>
 
     <div class="container">
@@ -123,12 +129,15 @@ if (!empty($_SESSION["admin"])) {
     </div>
 
     <footer class="footer">
-      <div class="icon">
+      <a href="https://www.facebook.com/escomipnmx" class="icon">
         <i class="fab fa-facebook-f"></i>
-      </div>
-      <div class="icon">
+      </a>
+      <a
+        href="https://twitter.com/escomunidad?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aescomunidad%7Ctwgr%5EeyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VtYmVkX2NsaWNrYWJpbGl0eV8xMjEwMiI6eyJidWNrZXQiOiJjb250cm9sIiwidmVyc2lvbiI6bnVsbH19&ref_url=https%3A%2F%2Fwww.escom.ipn.mx%2F"
+        class="icon"
+      >
         <i class="fab fa-twitter"></i>
-      </div>
+      </a>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>

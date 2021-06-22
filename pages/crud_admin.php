@@ -53,10 +53,14 @@ if (!empty($_SESSION["modal"])) {
   <body>
   <div id="sidebar" class="sidebar">
       <i id="close" class="fas fa-times"></i>
-      <a href="#" class="contenido">contenido1</a>
-      <a href="#" class="contenido">contenido2</a>
-      <a href="#" class="contenido">contenido3</a>
-      <a href="#" class="contenido">contenido4</a>
+      <a href="../index.html" class="contenido">Inicio</a>
+      <a href="https://www.escom.ipn.mx/" class="contenido">ESCOM</a>
+      <a href="https://www.ipn.mx/" class="contenido">IPN</a>
+      <a
+        href="https://www.saes.escom.ipn.mx/default.aspx?AspxAutoDetectCookieSupport=1"
+        class="contenido"
+        >SAES</a
+      >
       <a href="../php/salir.php" class="contenido">Cerrar Sesión</a>
     </div>
 
