@@ -8,12 +8,7 @@ if (empty($_SESSION["active"])) {
 
 // conexion a la base de datos
 
-if (file_exists("./storage/{$_SESSION["idUser"]}.pdf")) {
-  header("location: ./php_Mailer/enviarCorreo.php");
-}
-
 include "./database/database.php";
-
 $db = new database();
 $db->obtenerConexion();
 
@@ -173,9 +168,8 @@ $pdf->Cell(50, 10, utf8_decode("Promedio:   " . $promedio), 0, 2, "L", 0);
 $pdf->Cell(50, 10, utf8_decode("ESCOM fue tu:   " . $opcion), 0, 2, "L", 0);
 
 $pdf->Ln();
-$pdf->Output("F", "./storage/{$boleta}.pdf");
+$pdf->Output("I", "./storage/{$boleta}.pdf");
 $pdf->Close();
-ob_clean();
 //$pdf->Output();
-header("location: ./php_Mailer/enviarCorreo.php");
+header("location: ./pages/alumno.php");
 ?>

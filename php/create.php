@@ -62,7 +62,7 @@
         />
       </div>
 
-      <form action="../validando.php" method="POST" class="row p-4 g-2 my-4">
+      <form action="./validando.php" method="POST" class="row p-4 g-2 my-4">
         <h2 class="text-white">Identidad</h2>
         <div class="col-lg-12">
           <label for="boleta" class="form-label">No. De Boleta</label>

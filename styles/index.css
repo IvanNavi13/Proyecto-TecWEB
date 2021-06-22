@@ -114,6 +114,38 @@ body {
   background: #ff568f;
 }
 
+.container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #03a9f4;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .box .content form .submit {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #03a9f4;
+  margin-top: 15px;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .card:hover .box .content form .submit {
+  background: #ff568f;
+}
+
 .container .logoipn {
   margin-right: 30px;
   width: 180px;
@@ -218,6 +250,55 @@ body {
   color: #222;
   background-color: #fff;
   padding-left: 40px;
+}
+
+.modal-contenedor {
+  display: none;
+}
+
+.modal-contenedor.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenedor .modal-contenido {
+  position: relative;
+  width: 350px;
+  height: 220px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenedor .modal-contenido i {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: rgb(174, 18, 18);
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.modal-contenedor .modal-contenido i:hover {
+  transform: rotate(360deg);
+}
+
+.modal-contenedor .modal-contenido .modal-titulo {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.modal-contenedor .modal-contenido .modal-cuerpo {
+  text-align: center;
 }
 
 @media (max-width: 1179px) {
