@@ -23,7 +23,7 @@ CREATE TABLE examen
   salon VARCHAR(20) NOT NULL,
   horario TIME NOT NULL,
   grupo VARCHAR(5) NOT NULL,
-  cupo INT NOT NULL,
+  cupo INT NOT NULL DEFAULT 0,
   ficha INT NOT NULL,
   PRIMARY KEY (ficha)
 );

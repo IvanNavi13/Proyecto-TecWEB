@@ -250,6 +250,9 @@
           </select>
         </div>
         <div class="col-12 d-flex justify-content-center">
+          <button type="reset" class="me-4 mt-4 w-25 btn btn-primary">
+            limpiar
+          </button>
           <button type="submit" class="mt-4 w-50 btn btn-primary">
             Enviar
           </button>

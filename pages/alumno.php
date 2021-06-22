@@ -1,6 +1,14 @@
 <?php
+include "../database/database.php";
+
+
 session_start();
 $m = "";
+$db = new database();
+$db->obtenerConexion();
+$a = $db->rAlumno($_SESSION["idUser"]);
+$horario = $db->rExamen($a[16]);
+
 
 if (empty($_SESSION["active"])) {
   header("location: ./login_alumno.php");
@@ -28,7 +36,7 @@ if (!empty($_SESSION["modal"])) {
       <h3 class="modal-titulo">¡REGISTRO EXITOSO!</h3>
       <div class="modal-cuerpo">
           En caso de quiera cambiar su informacion hay una opcion que lo permite,
-          de lo contrario puede obtner el pdf con toda la información
+          de lo contrario puede obtner el pdf con toda la información.
       </div>
     </div>
 </div>';
@@ -112,8 +120,12 @@ if (!empty($_SESSION["modal"])) {
             <h2>IPN</h2>
             <h3>Alumno</h3>
             <p>
-              Favor de verificar que la informacion que proporcionate sea
-              correcta
+
+              Su horario:
+              <?php echo "LAB-{$horario[0]} <br/>";
+              echo "HORA-{$horario[1]} <br/>"?>
+              "Su contraseña es su apellido paterno en mayúsculas"
+
             </p>
             <a href="./update_alumno.php?id=<?php echo $_SESSION[
               "idUser"

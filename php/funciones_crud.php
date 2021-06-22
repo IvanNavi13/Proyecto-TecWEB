@@ -37,6 +37,9 @@ switch ($_POST["opcion"]) {
     
     break;
   case "eliminar":
+    $b = $db->rAlumno($_POST["id"]);
+    $temp = $db->rExamen($b[16]);
+    $db->uExamen($temp[0],$temp[1],$temp[2],$temp[3]- 1,$temp[4]);
     $a = $db->dAlumno($_POST["id"]);
     echo $a;
     break;
