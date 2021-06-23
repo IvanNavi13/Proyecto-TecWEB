@@ -18,7 +18,7 @@
 - MySQL
 
 -----------------------------------
-                                                     Equipo: 
+                                                              Equipo: 
                                                                    
   - Cano Jiménez Samuel Isaías
 
