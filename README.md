@@ -17,14 +17,15 @@
 
 -MySQL
 
+-----------------------------------
+             Equipo:
+-----------------------------------
 
-Equipo:
+  -Cano Jiménez Samuel Isaías
 
--Cano Jiménez Samuel Isaías
+  -Garcia Garcia Cano Ivan
 
--Garcia Garcia Cano Ivan
+  -Ramírez Domínguez Aldo Eduardo
 
--Ramírez Domínguez Aldo Eduardo
-
--Torres Jiménez Diego Antonio
+  -Torres Jiménez Diego Antonio
 
