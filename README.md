@@ -18,9 +18,7 @@
 -MySQL
 
 -----------------------------------
-             Equipo:
------------------------------------
-
+                                                                   Equipo: 
   -Cano Jiménez Samuel Isaías
 
   -Garcia Garcia Cano Ivan
@@ -28,4 +26,7 @@
   -Ramírez Domínguez Aldo Eduardo
 
   -Torres Jiménez Diego Antonio
+-----------------------------------
+
+
 
