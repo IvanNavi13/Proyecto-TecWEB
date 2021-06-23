@@ -7,26 +7,26 @@
 
 ##### Lenguajes utilizados:
 
--JavaScript
+- JavaScript
 
--HTML
+- HTML
 
--PHP
+- PHP
 
--CSS
+- CSS
 
--MySQL
+- MySQL
 
 -----------------------------------
                                                      Equipo: 
                                                                    
-  -Cano Jiménez Samuel Isaías
+  - Cano Jiménez Samuel Isaías
 
-  -Garcia Garcia Cano Ivan
+  - Garcia Garcia Cano Ivan
 
-  -Ramírez Domínguez Aldo Eduardo
+  - Ramírez Domínguez Aldo Eduardo
 
-  -Torres Jiménez Diego Antonio
+  - Torres Jiménez Diego Antonio
   
 -----------------------------------
 
